@@ -1,0 +1,229 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root variables for colors */
+:root {
+    --primary-color: #00ffb3; /* Glowing green */
+    --secondary-color: #ff00ff; /* Glowing magenta */
+    --background-color: #101010; /* Dark background */
+    --text-color: #f0f0f0; /* Light text */
+    --hover-color: #ff6347; /* Tomato red for hover effects */
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+/* Fullscreen section styling */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    scroll-snap-align: start;
+    padding: 50px 20px; /* Increased padding for more space */
+    text-align: center;
+}
+
+/* Snap scrolling for sections */
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+/* Header styling */
+header {
+    width: 100%;
+    background: #222;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin: 0 20px; /* Increased spacing between nav items */
+}
+
+.navbar ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-size: 1.1em;
+}
+
+.navbar ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Home section */
+.home-container {
+    max-width: 800px;
+    text-align: center;
+    line-height: 1.6;
+    padding: 20px; /* Padding inside the container */
+}
+
+.home-container h1 {
+    font-size: 3em;
+    color: var(--primary-color);
+    text-shadow: 0 0 8px var(--primary-color);
+    margin-bottom: 10px; /* Space between elements */
+}
+
+.home-container h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.home-container h2 span {
+    color: var(--secondary-color);
+    text-shadow: 0 0 8px var(--secondary-color);
+}
+
+.home-container p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* About, Skills, and Contact sections */
+.about-container, .skills-container, .contact-container {
+    max-width: 800px;
+    padding: 20px; /* Added padding for spacing */
+    line-height: 1.8;
+}
+
+/* Section Headings */
+.about-container h1, .skills-container h1, .contact-container h1 {
+    color: var(--secondary-color);
+    text-shadow: 0 0 8px var(--secondary-color);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about-container ul, .skills-container ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.about-container ul li, .skills-container ul li {
+    font-size: 1.2em;
+    margin-bottom: 10px; /* Spacing between list items */
+}
+
+/* Skills section */
+.skills-container {
+    max-width: 800px;
+    padding: 20px;
+    line-height: 1.8;
+}
+
+/* Skills section */
+.skills-container {
+    max-width: 600px;
+    padding: 20px;
+    line-height: 1.8;
+}
+
+.skills-container h1 {
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    color: var(--secondary-color);
+    text-shadow: 0 0 8px var(--secondary-color);
+}
+
+/* Skill items in column with borders */
+.skills-container ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Aligns skills in a column */
+    gap: 15px;
+}
+
+.skills-container ul li {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 15px; /* Padding inside each skill item */
+    color: var(--text-color);
+    border: 2px solid var(--primary-color); /* Border color */
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect on skill items */
+.skills-container ul li:hover {
+    background-color: var(--primary-color); /* Background on hover */
+    color: var(--background-color); /* Text color on hover */
+}
+
+
+/* Contact section */
+.contact-container ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 20px;
+}
+
+.contact-container ul li {
+    margin: 0 15px;
+}
+
+.contact-container ul li a {
+    font-size: 2em;
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+.contact-container ul li a:hover {
+    color: var(--hover-color);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    width: 100%;
+    font-size: 1em;
+    color: var(--text-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+    }
+    .nav-list {
+        padding: 0 5%;
+    }
+    .about-container, .skills-container, .contact-container {
+        padding: 20px 5%;
+    }
+}
